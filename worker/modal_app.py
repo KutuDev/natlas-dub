@@ -31,7 +31,7 @@ image = (
         "cd /opt/yarngpt_decoder && gdown 1-ASeEkrn4HY49yZWHTASgfGFNXdVnLTt && ls -la /opt/yarngpt_decoder",
     )
     .pip_install(
-        "torch==2.5.1", "transformers==4.46.3", "accelerate", "bitsandbytes", "huggingface_hub",
+        "torch==2.5.1", "torchaudio==2.5.1", "transformers==4.46.3", "accelerate", "bitsandbytes", "huggingface_hub",
         "sentencepiece", "openai-whisper", "soundfile", "numpy<2.2", "librosa",
         "fastapi", "uvicorn[standard]", "python-multipart", "httpx", "pydantic", "python-dotenv",
         "gradio>=5.49,<6",
