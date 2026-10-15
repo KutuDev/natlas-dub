@@ -1,0 +1,535 @@
+{
+ "clip": "moniepoint__engineering__poweringdreams___moniepo.mp4",
+ "target": "ig",
+ "via": "https://natlas-dub.onrender.com",
+ "steps": [
+  {
+   "step": "upload",
+   "seconds": 4.0,
+   "http": 200
+  },
+  {
+   "step": "process_asr_translate",
+   "seconds": 40.5,
+   "status": "done",
+   "stage": "review",
+   "error": null
+  },
+  {
+   "step": "approve_all_unedited",
+   "seconds": 0.5
+  },
+  {
+   "step": "tts",
+   "seconds": 307.5,
+   "status": "done",
+   "stage": "voiced",
+   "error": null
+  },
+  {
+   "step": "render",
+   "seconds": 18.1,
+   "status": "done",
+   "stage": "rendered",
+   "error": null
+  }
+ ],
+ "segments": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "end": 7.02,
+   "original_text": "okay, the most interesting thing that i'm working on right now has to be the network status feature for etna data providers.",
+   "target_language": "Igbo",
+   "translated_text": "Ọ dị mma, ihe kacha mma m na-arụ ọrụ ugbu a bụ atụmatụ ọnọdụ netwọk maka ndị na-enye data Etna.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Ọ dị mma, ihe kacha mma m na-arụ ọrụ ugbu a bụ atụmatụ ọnọdụ netwọk maka ndị na-enye data Etna.",
+   "char_count": 95
+  },
+  {
+   "index": 1,
+   "start": 7.02,
+   "end": 9.24,
+   "original_text": "it may seem like a small thing.",
+   "target_language": "Igbo",
+   "translated_text": "Ọ nwere ike ịdị ka obere ihe.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Ọ nwere ike ịdị ka obere ihe.",
+   "char_count": 29
+  },
+  {
+   "index": 2,
+   "start": 9.24,
+   "end": 10.32,
+   "original_text": "or a small feature?",
+   "target_language": "Igbo",
+   "translated_text": "Ma ọ bụ obere ihe?",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Ma ọ bụ obere ihe?",
+   "char_count": 18
+  },
+  {
+   "index": 3,
+   "start": 10.32,
+   "end": 12.06,
+   "original_text": "not to use her but on the back end.",
+   "target_language": "Igbo",
+   "translated_text": "Iji na-akwaghi ya, n'azụ ya.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Iji na-akwaghi ya, n'azụ ya.",
+   "char_count": 28
+  },
+  {
+   "index": 4,
+   "start": 12.06,
+   "end": 15.96,
+   "original_text": "it requires a lot of planning and a lot of lines of code.",
+   "target_language": "Igbo",
+   "translated_text": "ọ dị mkpa ka ị na-eme atụmatụ nke ọma ma tinye ọtụtụ ahịrị koodu.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "ọ dị mkpa ka ị na-eme atụmatụ nke ọma ma tinye ọtụtụ ahịrị koodu.",
+   "char_count": 65
+  },
+  {
+   "index": 5,
+   "start": 15.96,
+   "end": 18.3,
+   "original_text": "its particularly interesting to me because its",
+   "target_language": "Igbo",
+   "translated_text": "nke ya na-eme ka m nwee mmasị n'ihi na",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "nke ya na-eme ka m nwee mmasị n'ihi na",
+   "char_count": 38
+  },
+  {
+   "index": 6,
+   "start": 18.3,
+   "end": 19.44,
+   "original_text": "something that",
+   "target_language": "Igbo",
+   "translated_text": "ihe ọ bụla",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "ihe ọ bụla",
+   "char_count": 10
+  },
+  {
+   "index": 7,
+   "start": 19.44,
+   "end": 22.32,
+   "original_text": "it allows users to have access to the status quo.",
+   "target_language": "Igbo",
+   "translated_text": "Ọ na-enye ndị ọrụ ohere inwe ohere na ọnọdụ dị ugbu a.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Ọ na-enye ndị ọrụ ohere inwe ohere na ọnọdụ dị ugbu a.",
+   "char_count": 54
+  },
+  {
+   "index": 8,
+   "start": 22.32,
+   "end": 24.0,
+   "original_text": "just before they performed any operations.",
+   "target_language": "Igbo",
+   "translated_text": "n'oge na-adịghị anya tupu ha emee ọrụ ọ bụla.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "n'oge na-adịghị anya tupu ha emee ọrụ ọ bụla.",
+   "char_count": 45
+  },
+  {
+   "index": 9,
+   "start": 24.0,
+   "end": 29.64,
+   "original_text": "traditionally, what used to happen is a user has to go from beginning to end of the floor before they start.",
+   "target_language": "Igbo",
+   "translated_text": "N'ụzọ omenala, ihe a na-emekarị bụ na onye ọrụ ga-aga site na mmalite ruo na njedebe nke ala tupu ha amalite.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "N'ụzọ omenala, ihe a na-emekarị bụ na onye ọrụ ga-aga site na mmalite ruo na njedebe nke ala tupu ha amalite.",
+   "char_count": 109
+  },
+  {
+   "index": 10,
+   "start": 29.64,
+   "end": 30.81,
+   "original_text": "4 getting",
+   "target_language": "Igbo",
+   "translated_text": "Igbo: anọ",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Igbo: anọ",
+   "char_count": 9
+  },
+  {
+   "index": 11,
+   "start": 30.81,
+   "end": 35.43,
+   "original_text": "see notification or an error message saying this user or this provider is down.",
+   "target_language": "Igbo",
+   "translated_text": "Ịhụ ịdọ aka ná ntị ma ọ bụ ozi njehie na-ekwu na onye ọrụ a ma ọ bụ onye na-enye ya adịghị.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Ịhụ ịdọ aka ná ntị ma ọ bụ ozi njehie na-ekwu na onye ọrụ a ma ọ bụ onye na-enye ya adịghị.",
+   "char_count": 91
+  },
+  {
+   "index": 12,
+   "start": 35.43,
+   "end": 37.65,
+   "original_text": "currently what happens is..",
+   "target_language": "Igbo",
+   "translated_text": "n'ezie ihe na-eme ugbu a bụ...",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [
+    "repetition_removed"
+   ],
+   "warnings": [],
+   "final_text": "n'ezie ihe na-eme ugbu a bụ...",
+   "char_count": 30
+  },
+  {
+   "index": 13,
+   "start": 37.65,
+   "end": 39.33,
+   "original_text": "if a user logs in to the app,",
+   "target_language": "Igbo",
+   "translated_text": "Ọ bụrụ na onye ọrụ banyere na ngwa ahụ,",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Ọ bụrụ na onye ọrụ banyere na ngwa ahụ,",
+   "char_count": 39
+  },
+  {
+   "index": 14,
+   "start": 39.33,
+   "end": 40.71,
+   "original_text": "to perform an operation..",
+   "target_language": "Igbo",
+   "translated_text": "Iji mee ọrụ.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Iji mee ọrụ.",
+   "char_count": 12
+  },
+  {
+   "index": 15,
+   "start": 40.71,
+   "end": 41.79,
+   "original_text": "airtime or desire",
+   "target_language": "Igbo",
+   "translated_text": "Nke a bụ ntụgharị Igbo maka \"airtime or desire\":\n\nma ọ bụ oge ikuku ma ọ bụ ọchịchọ",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Nke a bụ ntụgharị Igbo maka \"airtime or desire\":\n\nma ọ bụ oge ikuku ma ọ bụ ọchịchọ",
+   "char_count": 83
+  },
+  {
+   "index": 16,
+   "start": 41.79,
+   "end": 44.4,
+   "original_text": "they can immediately see on their telco",
+   "target_language": "Igbo",
+   "translated_text": "ha nwere ike ịhụ ozugbo na telikomunikashọn ha",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "ha nwere ike ịhụ ozugbo na telikomunikashọn ha",
+   "char_count": 46
+  },
+  {
+   "index": 17,
+   "start": 44.4,
+   "end": 49.98,
+   "original_text": "whether or not the provider is active, this helps to save time and increases efficiency.",
+   "target_language": "Igbo",
+   "translated_text": "ma ọ bụ na onye na-enye ihe onwunwe na-arụ ọrụ, nke a na-enyere aka ịchekwa oge ma na-eme ka arụmọrụ dịkwuo mma.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "ma ọ bụ na onye na-enye ihe onwunwe na-arụ ọrụ, nke a na-enyere aka ịchekwa oge ma na-eme ka arụmọrụ dịkwuo mma.",
+   "char_count": 112
+  },
+  {
+   "index": 18,
+   "start": 49.98,
+   "end": 51.21,
+   "original_text": "throughout r.",
+   "target_language": "Igbo",
+   "translated_text": "N'ime ihe niile.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "N'ime ihe niile.",
+   "char_count": 16
+  },
+  {
+   "index": 19,
+   "start": 51.21,
+   "end": 54.03,
+   "original_text": "system",
+   "target_language": "Igbo",
+   "translated_text": "Nhazi",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [
+    "very_short_for_duration"
+   ],
+   "warnings": [],
+   "final_text": "Nhazi",
+   "char_count": 5
+  },
+  {
+   "index": 20,
+   "start": 54.03,
+   "end": 56.47,
+   "original_text": "i feel like you're not providing the emotional support i need during tough times.b",
+   "target_language": "Igbo",
+   "translated_text": "Ọ na-adị m ka ị naghị enye nkwado mmetụta uche m chọrọ n'oge ihe isi ike.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Ọ na-adị m ka ị naghị enye nkwado mmetụta uche m chọrọ n'oge ihe isi ike.",
+   "char_count": 73
+  }
+ ],
+ "video_bytes": 4919112,
+ "srt_bytes": 1945,
+ "audio_bytes": 5421164,
+ "job_meta": {
+  "job_id": "ed887852e6a7468fbd3c93dde1206233",
+  "created": 1792068482.8564858,
+  "stage": "rendered",
+  "status": "done",
+  "error": null,
+  "message": "Video ready",
+  "warnings": [
+   "Segment 9: voice is 2.2s for a 1.7s slot; sped up 1.25x (cap) and it will overlap the next segment. Shorten the text or raise speech speed.",
+   "Segment 16: voice is 3.4s for a 1.1s slot; sped up 1.25x (cap) and it will overlap the next segment. Shorten the text or raise speech speed.",
+   "Segment 21: voice is 4.1s for a 2.4s slot; sped up 1.25x (cap) and it will overlap the next segment. Shorten the text or raise speech speed.",
+   "Segment 21: voice runs past the end of the video and is cut."
+  ],
+  "timings": {
+   "extract_audio": 0.23,
+   "asr": 4.35,
+   "translation": 32.54,
+   "tts": 297.21,
+   "audio_fit": 4.09,
+   "render": 12.34
+  },
+  "translation_edited": false,
+  "filename": "moniepoint__engineering__poweringdreams___moniepo.mp4",
+  "tester_name": "Hark internal test",
+  "tester_email": "",
+  "duration": 56.47,
+  "has_audio": true,
+  "size_bytes": 4375740,
+  "trimmed_from": null,
+  "target_language": "ig",
+  "source_language": "en",
+  "voice": "female",
+  "protected_terms": [
+   "Moniepoint"
+  ],
+  "speed": 1.0,
+  "clips": [
+   {
+    "index": 0,
+    "start": 0.0,
+    "slot": 7.02,
+    "duration": 5.71,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 1,
+    "start": 7.02,
+    "slot": 2.22,
+    "duration": 1.52,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 2,
+    "start": 9.24,
+    "slot": 1.08,
+    "duration": 0.96,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 3,
+    "start": 10.32,
+    "slot": 1.74,
+    "duration": 1.35,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 4,
+    "start": 12.06,
+    "slot": 3.9,
+    "duration": 3.87,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 5,
+    "start": 15.96,
+    "slot": 2.34,
+    "duration": 2.07,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 6,
+    "start": 18.3,
+    "slot": 1.14,
+    "duration": 0.53,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 7,
+    "start": 19.44,
+    "slot": 2.88,
+    "duration": 2.88,
+    "fit_tempo": 1.097
+   },
+   {
+    "index": 8,
+    "start": 22.32,
+    "slot": 1.68,
+    "duration": 1.79,
+    "fit_tempo": 1.25
+   },
+   {
+    "index": 9,
+    "start": 24.0,
+    "slot": 5.64,
+    "duration": 5.64,
+    "fit_tempo": 1.118
+   },
+   {
+    "index": 10,
+    "start": 29.64,
+    "slot": 1.17,
+    "duration": 0.53,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 11,
+    "start": 30.81,
+    "slot": 4.62,
+    "duration": 3.64,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 12,
+    "start": 35.43,
+    "slot": 2.22,
+    "duration": 1.36,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 13,
+    "start": 37.65,
+    "slot": 1.68,
+    "duration": 1.68,
+    "fit_tempo": 1.095
+   },
+   {
+    "index": 14,
+    "start": 39.33,
+    "slot": 1.38,
+    "duration": 0.69,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 15,
+    "start": 40.71,
+    "slot": 1.08,
+    "duration": 2.7,
+    "fit_tempo": 1.25
+   },
+   {
+    "index": 16,
+    "start": 41.79,
+    "slot": 2.61,
+    "duration": 2.52,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 17,
+    "start": 44.4,
+    "slot": 5.58,
+    "duration": 5.58,
+    "fit_tempo": 1.145
+   },
+   {
+    "index": 18,
+    "start": 49.98,
+    "slot": 1.23,
+    "duration": 0.69,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 19,
+    "start": 51.21,
+    "slot": 2.82,
+    "duration": 0.49,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 20,
+    "start": 54.03,
+    "slot": 2.44,
+    "duration": 3.33,
+    "fit_tempo": 1.25
+   }
+  ],
+  "render_options": {
+   "subtitles": true,
+   "background": false,
+   "sub_position": "bottom",
+   "mask": true,
+   "mask_height": 0.14
+  },
+  "has_audio_preview": true,
+  "has_video": true
+ }
+}

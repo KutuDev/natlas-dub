@@ -1,0 +1,536 @@
+{
+ "clip": "moniepoint__engineering__poweringdreams___moniepo.mp4",
+ "target": "ha",
+ "via": "https://natlas-dub.onrender.com",
+ "steps": [
+  {
+   "step": "upload",
+   "seconds": 131.0,
+   "http": 200
+  },
+  {
+   "step": "process_asr_translate",
+   "seconds": 41.7,
+   "status": "done",
+   "stage": "review",
+   "error": null
+  },
+  {
+   "step": "approve_all_unedited",
+   "seconds": 0.6
+  },
+  {
+   "step": "tts",
+   "seconds": 280.6,
+   "status": "done",
+   "stage": "voiced",
+   "error": null
+  },
+  {
+   "step": "render",
+   "seconds": 13.4,
+   "status": "done",
+   "stage": "rendered",
+   "error": null
+  }
+ ],
+ "segments": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "end": 7.02,
+   "original_text": "okay, the most interesting thing that i'm working on right now has to be the network status feature for etna data providers.",
+   "target_language": "Hausa",
+   "translated_text": "lafiya, mafi ban sha'awa da nake aiki akai a halin yanzu shine fasalin matsayin hanyar sadarwa ga masu samar da bayanai na etna data.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "lafiya, mafi ban sha'awa da nake aiki akai a halin yanzu shine fasalin matsayin hanyar sadarwa ga masu samar da bayanai na etna data.",
+   "char_count": 133
+  },
+  {
+   "index": 1,
+   "start": 7.02,
+   "end": 9.24,
+   "original_text": "it may seem like a small thing.",
+   "target_language": "Hausa",
+   "translated_text": "zai iya bayyana kamar ƙaramin abu.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "zai iya bayyana kamar ƙaramin abu.",
+   "char_count": 34
+  },
+  {
+   "index": 2,
+   "start": 9.24,
+   "end": 10.32,
+   "original_text": "or a small feature?",
+   "target_language": "Hausa",
+   "translated_text": "Shin wani abu ne mai ban sha'awa?",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Shin wani abu ne mai ban sha'awa?",
+   "char_count": 33
+  },
+  {
+   "index": 3,
+   "start": 10.32,
+   "end": 12.06,
+   "original_text": "not to use her but on the back end.",
+   "target_language": "Hausa",
+   "translated_text": "ba a yi amfani da ita ba, a gefen baya.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "ba a yi amfani da ita ba, a gefen baya.",
+   "char_count": 39
+  },
+  {
+   "index": 4,
+   "start": 12.06,
+   "end": 15.96,
+   "original_text": "it requires a lot of planning and a lot of lines of code.",
+   "target_language": "Hausa",
+   "translated_text": "yana buƙatar babban shiri da layukan lambar da yawa.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "yana buƙatar babban shiri da layukan lambar da yawa.",
+   "char_count": 52
+  },
+  {
+   "index": 5,
+   "start": 15.96,
+   "end": 18.3,
+   "original_text": "its particularly interesting to me because its",
+   "target_language": "Hausa",
+   "translated_text": "yana da ban sha'awa musamman a gare ni saboda",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "yana da ban sha'awa musamman a gare ni saboda",
+   "char_count": 45
+  },
+  {
+   "index": 6,
+   "start": 18.3,
+   "end": 19.44,
+   "original_text": "something that",
+   "target_language": "Hausa",
+   "translated_text": "wani abu da",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "wani abu da",
+   "char_count": 11
+  },
+  {
+   "index": 7,
+   "start": 19.44,
+   "end": 22.32,
+   "original_text": "it allows users to have access to the status quo.",
+   "target_language": "Hausa",
+   "translated_text": "yana ba masu amfani damar samun dama ga halin da ake ciki.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "yana ba masu amfani damar samun dama ga halin da ake ciki.",
+   "char_count": 58
+  },
+  {
+   "index": 8,
+   "start": 22.32,
+   "end": 24.0,
+   "original_text": "just before they performed any operations.",
+   "target_language": "Hausa",
+   "translated_text": "kafin su yi kowace aiki.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "kafin su yi kowace aiki.",
+   "char_count": 24
+  },
+  {
+   "index": 9,
+   "start": 24.0,
+   "end": 29.64,
+   "original_text": "traditionally, what used to happen is a user has to go from beginning to end of the floor before they start.",
+   "target_language": "Hausa",
+   "translated_text": "A al'ada, abin da ya faru shi ne mai amfani ya bukaci ya tafi daga farko zuwa ƙarshe na bene kafin ya fara.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "A al'ada, abin da ya faru shi ne mai amfani ya bukaci ya tafi daga farko zuwa ƙarshe na bene kafin ya fara.",
+   "char_count": 107
+  },
+  {
+   "index": 10,
+   "start": 29.64,
+   "end": 30.81,
+   "original_text": "4 getting",
+   "target_language": "Hausa",
+   "translated_text": "Hausa: huɗu",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Hausa: huɗu",
+   "char_count": 11
+  },
+  {
+   "index": 11,
+   "start": 30.81,
+   "end": 35.43,
+   "original_text": "see notification or an error message saying this user or this provider is down.",
+   "target_language": "Hausa",
+   "translated_text": "dubawa ko saƙon kuskure yana cewa wannan mai amfani ko wannan sabis ɗin ba ya aiki.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "dubawa ko saƙon kuskure yana cewa wannan mai amfani ko wannan sabis ɗin ba ya aiki.",
+   "char_count": 83
+  },
+  {
+   "index": 12,
+   "start": 35.43,
+   "end": 37.65,
+   "original_text": "currently what happens is..",
+   "target_language": "Hausa",
+   "translated_text": "a halin yanzu abin da ke faruwa shi ne...",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [
+    "repetition_removed"
+   ],
+   "warnings": [],
+   "final_text": "a halin yanzu abin da ke faruwa shi ne...",
+   "char_count": 41
+  },
+  {
+   "index": 13,
+   "start": 37.65,
+   "end": 39.33,
+   "original_text": "if a user logs in to the app,",
+   "target_language": "Hausa",
+   "translated_text": "idan mai amfani ya shiga cikin app",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "idan mai amfani ya shiga cikin app",
+   "char_count": 34
+  },
+  {
+   "index": 14,
+   "start": 39.33,
+   "end": 40.71,
+   "original_text": "to perform an operation..",
+   "target_language": "Hausa",
+   "translated_text": "don yin aiki.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "don yin aiki.",
+   "char_count": 13
+  },
+  {
+   "index": 15,
+   "start": 40.71,
+   "end": 41.79,
+   "original_text": "airtime or desire",
+   "target_language": "Hausa",
+   "translated_text": "lokacin iska ko sha'awa",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "lokacin iska ko sha'awa",
+   "char_count": 23
+  },
+  {
+   "index": 16,
+   "start": 41.79,
+   "end": 44.4,
+   "original_text": "they can immediately see on their telco",
+   "target_language": "Hausa",
+   "translated_text": "za su iya ganin shi nan take a kan na'urar sadarwa ta su",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "za su iya ganin shi nan take a kan na'urar sadarwa ta su",
+   "char_count": 56
+  },
+  {
+   "index": 17,
+   "start": 44.4,
+   "end": 49.98,
+   "original_text": "whether or not the provider is active, this helps to save time and increases efficiency.",
+   "target_language": "Hausa",
+   "translated_text": "ko dai mai bayarwa yana aiki, wannan yana taimakawa wajen adana lokaci da kuma kara inganci.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "ko dai mai bayarwa yana aiki, wannan yana taimakawa wajen adana lokaci da kuma kara inganci.",
+   "char_count": 92
+  },
+  {
+   "index": 18,
+   "start": 49.98,
+   "end": 51.21,
+   "original_text": "throughout r.",
+   "target_language": "Hausa",
+   "translated_text": "a duk r.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "a duk r.",
+   "char_count": 8
+  },
+  {
+   "index": 19,
+   "start": 51.21,
+   "end": 54.03,
+   "original_text": "system",
+   "target_language": "Hausa",
+   "translated_text": "sistemu",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [
+    "very_short_for_duration"
+   ],
+   "warnings": [],
+   "final_text": "sistemu",
+   "char_count": 7
+  },
+  {
+   "index": 20,
+   "start": 54.03,
+   "end": 56.47,
+   "original_text": "i feel like you're not providing the emotional support i need during tough times.b",
+   "target_language": "Hausa",
+   "translated_text": "Ina jin kamar ba ku ba ni tallafin jin dadi da nake bukata a lokacin wahala.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Ina jin kamar ba ku ba ni tallafin jin dadi da nake bukata a lokacin wahala.",
+   "char_count": 76
+  }
+ ],
+ "video_bytes": 4977690,
+ "srt_bytes": 1711,
+ "audio_bytes": 5421164,
+ "job_meta": {
+  "job_id": "2d382891fd974e7ab5e5d0187055c5f6",
+  "created": 1792068137.3784063,
+  "stage": "rendered",
+  "status": "done",
+  "error": null,
+  "message": "Video ready",
+  "warnings": [
+   "Segment 3: voice is 1.6s for a 1.1s slot; sped up 1.25x (cap) and it will overlap the next segment. Shorten the text or raise speech speed.",
+   "Segment 4: voice is 2.3s for a 1.7s slot; sped up 1.25x (cap) and it will overlap the next segment. Shorten the text or raise speech speed.",
+   "Segment 16: voice is 1.4s for a 1.1s slot; sped up 1.25x (cap) and it will overlap the next segment. Shorten the text or raise speech speed.",
+   "Segment 21: voice is 4.4s for a 2.4s slot; sped up 1.25x (cap) and it will overlap the next segment. Shorten the text or raise speech speed.",
+   "Segment 21: voice runs past the end of the video and is cut."
+  ],
+  "timings": {
+   "extract_audio": 0.24,
+   "asr": 11.47,
+   "translation": 25.14,
+   "tts": 271.1,
+   "audio_fit": 4.62,
+   "render": 12.51
+  },
+  "translation_edited": false,
+  "filename": "moniepoint__engineering__poweringdreams___moniepo.mp4",
+  "tester_name": "Hark internal test",
+  "tester_email": "",
+  "duration": 56.47,
+  "has_audio": true,
+  "size_bytes": 4375740,
+  "trimmed_from": null,
+  "target_language": "ha",
+  "source_language": "en",
+  "voice": "female",
+  "protected_terms": [
+   "Moniepoint"
+  ],
+  "speed": 1.0,
+  "clips": [
+   {
+    "index": 0,
+    "start": 0.0,
+    "slot": 7.02,
+    "duration": 7.02,
+    "fit_tempo": 1.149
+   },
+   {
+    "index": 1,
+    "start": 7.02,
+    "slot": 2.22,
+    "duration": 1.67,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 2,
+    "start": 9.24,
+    "slot": 1.08,
+    "duration": 1.28,
+    "fit_tempo": 1.25
+   },
+   {
+    "index": 3,
+    "start": 10.32,
+    "slot": 1.74,
+    "duration": 1.85,
+    "fit_tempo": 1.25
+   },
+   {
+    "index": 4,
+    "start": 12.06,
+    "slot": 3.9,
+    "duration": 2.8,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 5,
+    "start": 15.96,
+    "slot": 2.34,
+    "duration": 2.35,
+    "fit_tempo": 1.043
+   },
+   {
+    "index": 6,
+    "start": 18.3,
+    "slot": 1.14,
+    "duration": 0.64,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 7,
+    "start": 19.44,
+    "slot": 2.88,
+    "duration": 2.89,
+    "fit_tempo": 1.12
+   },
+   {
+    "index": 8,
+    "start": 22.32,
+    "slot": 1.68,
+    "duration": 1.47,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 9,
+    "start": 24.0,
+    "slot": 5.64,
+    "duration": 5.64,
+    "fit_tempo": 1.028
+   },
+   {
+    "index": 10,
+    "start": 29.64,
+    "slot": 1.17,
+    "duration": 0.64,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 11,
+    "start": 30.81,
+    "slot": 4.62,
+    "duration": 4.59,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 12,
+    "start": 35.43,
+    "slot": 2.22,
+    "duration": 0.72,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 13,
+    "start": 37.65,
+    "slot": 1.68,
+    "duration": 1.68,
+    "fit_tempo": 1.19
+   },
+   {
+    "index": 14,
+    "start": 39.33,
+    "slot": 1.38,
+    "duration": 0.56,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 15,
+    "start": 40.71,
+    "slot": 1.08,
+    "duration": 1.09,
+    "fit_tempo": 1.25
+   },
+   {
+    "index": 16,
+    "start": 41.79,
+    "slot": 2.61,
+    "duration": 2.61,
+    "fit_tempo": 1.236
+   },
+   {
+    "index": 17,
+    "start": 44.4,
+    "slot": 5.58,
+    "duration": 5.27,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 18,
+    "start": 49.98,
+    "slot": 1.23,
+    "duration": 0.41,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 19,
+    "start": 51.21,
+    "slot": 2.82,
+    "duration": 0.49,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 20,
+    "start": 54.03,
+    "slot": 2.44,
+    "duration": 3.49,
+    "fit_tempo": 1.25
+   }
+  ],
+  "render_options": {
+   "subtitles": true,
+   "background": false,
+   "sub_position": "bottom",
+   "mask": true,
+   "mask_height": 0.14
+  },
+  "has_audio_preview": true,
+  "has_video": true
+ }
+}
