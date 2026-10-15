@@ -50,4 +50,5 @@ def status() -> dict:
         "speech": callable(state["speech"]),
         "speech_backend": state["speech_backend"],
         "speech_supports_voice": state["speech_supports_voice"],
+        "yarngpt_error": __import__("os").environ.get("YARNGPT_ERROR") or None,
     }
