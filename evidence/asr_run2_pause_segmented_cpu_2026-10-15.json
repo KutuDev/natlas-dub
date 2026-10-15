@@ -1,0 +1,308 @@
+{
+ "host": "Linux-6.12.110+-aarch64-with-glibc2.41",
+ "cpu_count": 2,
+ "device": "cpu",
+ "model": "/workspace/projects/be6ffba2-be5d-4bc2-b9a3-cc245487fb8d/work/models/NigerianAccentedEnglish",
+ "runs": [
+  {
+   "clip": "moniepoint__engineering__poweringdreams___moniepo.mp4",
+   "audio_seconds": 56.47,
+   "asr_wall_seconds": 186.2,
+   "segments": [
+    {
+     "start": 0.0,
+     "end": 7.02,
+     "text": "okay, the most interesting thing that i'm working on right now has to be the network status feature for earthman data providers.",
+     "flags": []
+    },
+    {
+     "start": 7.02,
+     "end": 9.24,
+     "text": "it may seem like a small thing.",
+     "flags": []
+    },
+    {
+     "start": 9.24,
+     "end": 10.32,
+     "text": "or a small feature?",
+     "flags": []
+    },
+    {
+     "start": 10.32,
+     "end": 12.06,
+     "text": "not to use her but on the back end.",
+     "flags": []
+    },
+    {
+     "start": 12.06,
+     "end": 15.96,
+     "text": "it requires a lot of planning and a lot of lines of code.",
+     "flags": []
+    },
+    {
+     "start": 15.96,
+     "end": 18.3,
+     "text": "its particularly interesting to me because its",
+     "flags": []
+    },
+    {
+     "start": 18.3,
+     "end": 19.44,
+     "text": "something that",
+     "flags": []
+    },
+    {
+     "start": 19.44,
+     "end": 22.32,
+     "text": "it allows users to harm access to the status.",
+     "flags": []
+    },
+    {
+     "start": 22.32,
+     "end": 24.0,
+     "text": "just before they performed any operations.",
+     "flags": []
+    },
+    {
+     "start": 24.0,
+     "end": 29.64,
+     "text": "traditionally, what used to happen is a user has to go from beginning to end of the floor before they start.",
+     "flags": []
+    },
+    {
+     "start": 29.64,
+     "end": 30.81,
+     "text": "4. getting",
+     "flags": []
+    },
+    {
+     "start": 30.81,
+     "end": 35.43,
+     "text": "see notification or an error message saying this user or this provider is down.",
+     "flags": []
+    },
+    {
+     "start": 35.43,
+     "end": 37.65,
+     "text": "currently what happens is..",
+     "flags": [
+      "repetition_removed"
+     ]
+    },
+    {
+     "start": 37.65,
+     "end": 39.33,
+     "text": "if a user logs in to the app,",
+     "flags": []
+    },
+    {
+     "start": 39.33,
+     "end": 40.71,
+     "text": "to perform an operation..",
+     "flags": []
+    },
+    {
+     "start": 40.71,
+     "end": 41.79,
+     "text": "air time or desire",
+     "flags": []
+    },
+    {
+     "start": 41.79,
+     "end": 44.4,
+     "text": "they can immediately see on their telco",
+     "flags": []
+    },
+    {
+     "start": 44.4,
+     "end": 49.98,
+     "text": "whether or not the provider is active, this helps to save time and increases efficiency.",
+     "flags": []
+    },
+    {
+     "start": 49.98,
+     "end": 51.21,
+     "text": "throughout r.",
+     "flags": []
+    },
+    {
+     "start": 51.21,
+     "end": 54.03,
+     "text": "system",
+     "flags": [
+      "very_short_for_duration"
+     ]
+    },
+    {
+     "start": 54.03,
+     "end": 56.47,
+     "text": "are there cultural rituals that help orphaned individuals commemorate their heritage?",
+     "flags": []
+    }
+   ]
+  },
+  {
+   "clip": "moniepoint__poweringdreams__financialhappiness___.mp4",
+   "audio_seconds": 62.44,
+   "asr_wall_seconds": 224.7,
+   "segments": [
+    {
+     "start": 0.0,
+     "end": 2.76,
+     "text": "the time i got to learn about money points, i started with .",
+     "flags": []
+    },
+    {
+     "start": 2.76,
+     "end": 4.77,
+     "text": "yes, other mmo.",
+     "flags": []
+    },
+    {
+     "start": 4.77,
+     "end": 7.32,
+     "text": "their settlement was not an instant settlement.",
+     "flags": []
+    },
+    {
+     "start": 7.32,
+     "end": 9.42,
+     "text": "it was a 20-hour stay.",
+     "flags": []
+    },
+    {
+     "start": 9.42,
+     "end": 13.92,
+     "text": "and with the demand of customers here yesterday and with the little cash we have, we are looking for",
+     "flags": []
+    },
+    {
+     "start": 13.92,
+     "end": 15.87,
+     "text": "where we can get a better service.",
+     "flags": []
+    },
+    {
+     "start": 15.87,
+     "end": 18.33,
+     "text": "no, it's like some of them have been casting for something.",
+     "flags": []
+    },
+    {
+     "start": 18.33,
+     "end": 22.98,
+     "text": "that is what i began to add, when would i, an other thing that really convinced me to wait for them?",
+     "flags": []
+    },
+    {
+     "start": 22.98,
+     "end": 26.1,
+     "text": "it is that they said it was going to be an instant failure.",
+     "flags": []
+    },
+    {
+     "start": 26.1,
+     "end": 27.45,
+     "text": "settlement",
+     "flags": []
+    },
+    {
+     "start": 27.45,
+     "end": 29.79,
+     "text": "agreed, what about the order of the day?",
+     "flags": []
+    },
+    {
+     "start": 29.79,
+     "end": 31.35,
+     "text": "24hrs.",
+     "flags": []
+    },
+    {
+     "start": 31.35,
+     "end": 32.91,
+     "text": "so with that",
+     "flags": []
+    },
+    {
+     "start": 32.91,
+     "end": 34.5,
+     "text": "and more also",
+     "flags": []
+    },
+    {
+     "start": 34.5,
+     "end": 37.44,
+     "text": "they promise us having a constant care.",
+     "flags": []
+    },
+    {
+     "start": 37.44,
+     "end": 38.52,
+     "text": "network",
+     "flags": []
+    },
+    {
+     "start": 38.52,
+     "end": 39.66,
+     "text": "so",
+     "flags": []
+    },
+    {
+     "start": 39.66,
+     "end": 43.77,
+     "text": "those are the three things that really convinced me to wait for them and",
+     "flags": []
+    },
+    {
+     "start": 43.77,
+     "end": 45.39,
+     "text": "when i saw the product",
+     "flags": []
+    },
+    {
+     "start": 45.39,
+     "end": 47.49,
+     "text": "and we tested it",
+     "flags": []
+    },
+    {
+     "start": 47.49,
+     "end": 49.8,
+     "text": "and i saw the way it works.",
+     "flags": []
+    },
+    {
+     "start": 49.8,
+     "end": 51.24,
+     "text": "really?",
+     "flags": []
+    },
+    {
+     "start": 51.24,
+     "end": 52.86,
+     "text": "it was waiting for.",
+     "flags": []
+    },
+    {
+     "start": 52.86,
+     "end": 54.84,
+     "text": "so thats what you look confused at?",
+     "flags": []
+    },
+    {
+     "start": 54.84,
+     "end": 59.61,
+     "text": "i was really excited when i saw the product.",
+     "flags": []
+    },
+    {
+     "start": 59.61,
+     "end": 62.44,
+     "text": "i feel like you're not providing the emotional support i need during tough times.b",
+     "flags": []
+    }
+   ]
+  }
+ ]
+}

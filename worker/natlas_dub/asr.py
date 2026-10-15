@@ -96,19 +96,86 @@ def transcribe(wav_path: str, source_language: str = "en", duration: float = Non
     if duration is None:
         duration = len(audio) / sr
     with _infer_lock:
-        try:
-            result = asr(
-                {"raw": np.ascontiguousarray(audio), "sampling_rate": sr},
-                return_timestamps=True,
-                chunk_length_s=30,
-                batch_size=1,
-            )
-            return chunks_to_segments(result, duration)
-        except (ValueError, RuntimeError, KeyError) as exc:
-            # Some fine-tunes ship without timestamp-token config. Fall back to fixed
-            # windows so the pipeline still has timed segments (coarser alignment, flagged).
-            log.warning("timestamped ASR failed (%s); using %ss windows", type(exc).__name__, WINDOW_S)
-            return _windowed(asr, audio, sr, duration)
+        # Real-run finding (2026-10-15, CPU): pipeline chunk_length_s=30 with return_timestamps on
+        # NCAIR1/NigerianAccentedEnglish returned ONE chunk and looped ("and then does not ...")
+        # after ~20 s. Segment on pauses instead and decode each short span on its own.
+        return _pause_segmented(asr, audio, sr, duration)
+
+
+MAX_SPAN_S = 14.0
+MIN_SPAN_S = 1.0
+
+
+def speech_spans(audio, sr, max_span=MAX_SPAN_S, min_span=MIN_SPAN_S, frame_s=0.03, min_pause_s=0.25):
+    """Energy-based pause detection -> [(start_s, end_s)] spans of <= max_span seconds."""
+    hop = max(1, int(frame_s * sr))
+    n = len(audio) // hop
+    if n == 0:
+        return []
+    frames = audio[: n * hop].reshape(n, hop)
+    rms = np.sqrt((frames ** 2).mean(axis=1) + 1e-12)
+    db = 20 * np.log10(rms + 1e-9)
+    thresh = max(np.percentile(db, 20) + 6.0, db.max() - 40.0)
+    quiet = db < thresh
+    min_pause = max(1, int(min_pause_s / frame_s))
+    # candidate cut points: centres of quiet runs at least min_pause long
+    cuts, i = [], 0
+    while i < n:
+        if quiet[i]:
+            j = i
+            while j < n and quiet[j]:
+                j += 1
+            if j - i >= min_pause:
+                cuts.append((i + j) // 2 * frame_s)
+            i = j
+        else:
+            i += 1
+    total = len(audio) / sr
+    spans, start = [], 0.0
+    for c in cuts + [total]:
+        if c - start < min_span and c != total:
+            continue
+        while c - start > max_span:  # hard split at the quietest frame inside the window
+            a, b = int((start + max_span * 0.5) / frame_s), int((start + max_span) / frame_s)
+            k = a + int(np.argmin(db[a:b])) if b > a else b
+            spans.append((start, k * frame_s)); start = k * frame_s
+        if c - start >= 0.3:
+            spans.append((start, c))
+        start = c
+    return spans
+
+
+def _dedupe_loops(text: str) -> str:
+    """Cut runaway repetition (a phrase of 2-8 words repeated 3+ times in a row)."""
+    words = text.split()
+    for size in range(2, 9):
+        i = 0
+        while i + size * 3 <= len(words):
+            unit = [w.lower() for w in words[i:i + size]]
+            reps = 1
+            while words[i + reps * size:i + (reps + 1) * size] and [w.lower() for w in words[i + reps * size:i + (reps + 1) * size]] == unit:
+                reps += 1
+            if reps >= 3:
+                words = words[:i + size] + words[i + reps * size:]
+            i += 1
+    return " ".join(words)
+
+
+def _pause_segmented(asr, audio, sr, duration):
+    segments = []
+    for start, end in speech_spans(audio, sr):
+        chunk = audio[int(start * sr):int(end * sr)]
+        raw = (asr({"raw": np.ascontiguousarray(chunk), "sampling_rate": sr},
+                   generate_kwargs={"no_repeat_ngram_size": 6}).get("text") or "").strip()
+        text = _dedupe_loops(raw)
+        if not text:
+            continue
+        end = min(end, duration)
+        flags = flag_low_confidence(text, start, end)
+        if text != raw:
+            flags.append("repetition_removed")
+        segments.append({"start": round(start, 2), "end": round(end, 2), "text": text, "flags": flags})
+    return segments
 
 
 WINDOW_S = 8.0

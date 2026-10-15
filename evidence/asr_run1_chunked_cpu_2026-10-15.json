@@ -1,0 +1,40 @@
+{
+ "host": "Linux-6.12.110+-aarch64-with-glibc2.41",
+ "cpu_count": 2,
+ "device": "cpu",
+ "model": "/workspace/projects/be6ffba2-be5d-4bc2-b9a3-cc245487fb8d/work/models/NigerianAccentedEnglish",
+ "runs": [
+  {
+   "clip": "moniepoint__engineering__poweringdreams___moniepo.mp4",
+   "audio_seconds": 56.47,
+   "asr_wall_seconds": 128.7,
+   "segments": [
+    {
+     "start": 0.0,
+     "end": 56.47,
+     "text": "okay, the most interesting thing that i am working on right now has to be the network status feature for ehterman data providers. it may seem like a small thing or a small feature to the user, but on the back end, it requires a lot of planning and a lot of lines of code. it is particularly interesting to me because it is something that allows users have access to the status just before they perform any operation. traditionally, what used to happen is a user has to go from beginning to end of the flow before she does not and then does not. and then does not and then does not and then does not need to process the status after she does not and then did not and then does not yetor and then does not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then did not yetor and then care to be the most interesting thing that i am working on right now has to be the network status feature for ehterman data providers? it may seem like a small thing or a small feature to the user but on the back end end it requires a lot of planning and a lot of lines of codes is particularly interesting to me because it is something that allows users have access to the status just before they perform any operation just before they perform any operation? traditionally what used to happen is a user has to go from beginning to end of the flow before they have been used to be used to be used to be used to be used to be used to be used to be used to be used to be used to be used to be used to be used to be used to be used to be used to be used to be used to be used to have access to the status just before they perform an operation. traditionally, what used to happen is a user has to go from beginning to end of the flow before getting a notification or an error message saying this user or this provider is down. currently, what happens is, if a user logs into the app to perform an operation at a time or data, they can immediately see on their telco whether or not the provider is active. this helps to save time and increases efficiency throughout our system.",
+     "flags": [
+      "speech_rate_implausible",
+      "repetition_possible_hallucination"
+     ]
+    }
+   ]
+  },
+  {
+   "clip": "moniepoint__poweringdreams__financialhappiness___.mp4",
+   "audio_seconds": 62.44,
+   "asr_wall_seconds": 165.1,
+   "segments": [
+    {
+     "start": 0.0,
+     "end": 62.44,
+     "text": "when i got to one of my money points i started with other mmo their settlement was not an instant settlement it was in 24 hours and with the demand of customers here yesterday and with the little cash we have we were looking for where we can get a better service. it is like someone who has been thirsty for something so i begin to add when will they, another thing that really convinced me to wait for them is that they said it was going to be an instant settlement against what had been the order of the day..., i said no because it was not such an instant settlement because it was not such an instant settlement because it wasnt an instant settlement it was not such an instant settlement it was not such an instant settlement it was a 21 hours and with the demand of customer here another day and a day and a day and a deal with the demand we need to have we need to have we need to have we need to have we need to have we need to have we need to have we need to have we need to have we need to have we need to have we need to have we need to have we need to have we need to have we need to have we need to have we need to have we need to have we need to have we to wait for project and i'm excited to wait for project and i'm excited to wait for project and i'm excited to wait for project so those are the three things that really convinced me to wait for them and i'm excited to wait for project so those are the three things that really convinced me to wait for them is that they said is that they said is going to be an instant settlement against what had been the order of the day 24 hours so with that and more so the problem with that and more so the problem with that and more so the problem with that and more so the problem with that and more so the problem with that and more so the problem with that and more so the problem with that and more so the problem with that and more so the problem with that and more so the problem with that and more so the problem with that and more so the problem with that was a constant network so those are the three things that really convinced me to wait for them all the three things that really convinced me to wait for them all the money when i saw the product and i saw the product and we tested it and we really it works waiting for me, so thats what really convinced me and i was really excited when i saw the product. aaaah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah! aah!",
+     "flags": [
+      "speech_rate_implausible",
+      "repetition_possible_hallucination"
+     ]
+    }
+   ]
+  }
+ ]
+}
