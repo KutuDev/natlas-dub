@@ -18,13 +18,13 @@
   <!-- Step 1 -->
   <section class="card" id="step1">
     <h2><span class="num">1</span> Upload video</h2>
-    <p class="hint">MP4, MOV or WEBM, up to <span id="limitS">90</span> seconds and <span id="limitMB">100</span> MB.</p>
+    <p class="hint">MP4, MOV or WEBM, up to <span id="limitS">180</span> seconds and <span id="limitMB">100</span> MB.</p>
     <input type="file" id="file" accept="video/mp4,video/quicktime,video/webm,.mp4,.mov,.webm,.m4v">
     <div class="row">
       <label>Your name (optional)<input type="text" id="testerName" maxlength="120"></label>
       <label>Email (optional)<input type="email" id="testerEmail" maxlength="200"></label>
     </div>
-    <label class="check"><input type="checkbox" id="trim60"> If the video is longer than the limit, use only its first 60 seconds.</label>
+    <label class="check"><input type="checkbox" id="trim60"> If the video is longer than the limit, use only its first <span class="limitS2">180</span> seconds.</label>
     <label class="check"><input type="checkbox" id="consent"> I own or have rights to this video and its voice; no impersonation.</label>
     <button id="uploadBtn" class="primary">Upload</button>
     <div id="uploadMsg" class="msg"></div>

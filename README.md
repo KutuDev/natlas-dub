@@ -24,7 +24,7 @@ Browser ──► Render (free, 512 MB)                         ──►  Kaggl
 Render runs no ML and no FFmpeg. If the worker is not registered or cannot be reached, the UI shows **"GPU worker offline — processing unavailable"**. No output is ever faked.
 
 ### Pipeline and segment IR
-1. **Upload** (consent required) is streamed to the worker. Videos over 100 MB get a 413. ffprobe enforces the 90 s limit, also with a 413. An optional *trim to first 60 s* re-encodes the first 60 s.
+1. **Upload** (consent required) is streamed to the worker. Videos over 100 MB get a 413. ffprobe enforces the 180 s limit (MAX_VIDEO_SECONDS), also with a 413. An optional *trim to first 60 s* re-encodes the first 180 s.
 2. **ASR** runs on the worker GPU. It uses the transformers ASR pipeline with `return_timestamps=True` and produces timed segments. Segments are flagged by heuristic (empty, implausible speech rate, repetition) because the pipeline does not expose log-probs.
 3. **Masking, then translation.** URLs, emails, phone numbers, currency amounts, @handles/#tags, ALL-CAPS and CamelCase brand tokens, and the user's protected terms become `[[Pn]]` placeholders. N-ATLaS translates the masked text and the placeholders are then restored. If the model drops a placeholder, the segment gets a warning; nothing is silently invented.
 4. **Review.** Each segment holds `{start, end, original_text, target_language, translated_text, edited_text, status: ai_generated|edited|approved, flags, warnings}`. `final_text = edited_text or translated_text` is the single source of truth for TTS and subtitles. Approval never re-translates. TTS is blocked (409) until every segment is approved.

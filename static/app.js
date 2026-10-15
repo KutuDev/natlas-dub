@@ -92,7 +92,7 @@
     const fd = new FormData();
     fd.append("file", f); fd.append("consent", "true");
     fd.append("tester_name", $("testerName").value); fd.append("tester_email", $("testerEmail").value);
-    if ($("trim60").checked) fd.append("trim_to_seconds", "60");
+    if ($("trim60").checked) fd.append("trim_to_seconds", $("limitS").textContent || "180");
     busy($("uploadBtn"), true); setMsg($("uploadMsg"), "Uploading…", "busy"); lockFrom(2);
     try {
       const r = await api("/api/upload", { method: "POST", body: fd });

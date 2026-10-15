@@ -37,7 +37,7 @@ image = (
         "gradio>=5.49,<6",
     )
     .env({"HF_HOME": "/cache/hf", "JOBS_DIR": "/tmp/natlas_jobs", "SESSION_LOG_PATH": "/cache/natlas_sessions.jsonl",
-          "NATLAS_RUNTIME": "modal", "PYTHONPATH": "/opt"})
+          "NATLAS_RUNTIME": "modal", "PYTHONPATH": "/opt", "MAX_VIDEO_SECONDS": "180"})
     .add_local_dir(str(HANDOVER), REMOTE, ignore=["__pycache__", "*.pyc"])
     .add_local_dir(str(HERE / "natlas_dub"), f"{REMOTE}/natlas_dub", ignore=["__pycache__"])
     .add_local_file(str(HERE / "start_worker.py"), f"{REMOTE}/start_worker.py")
