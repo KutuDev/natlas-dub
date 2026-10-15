@@ -16,6 +16,8 @@ def _float(name: str, default: float) -> float:
 GPU_WORKER_URL = os.environ.get("GPU_WORKER_URL", "").rstrip("/")
 GPU_WORKER_KEY = os.environ.get("GPU_WORKER_KEY", "")  # must equal the worker's DEV_API_KEY
 ADMIN_KEY = os.environ.get("ADMIN_KEY", "")
+# true when the worker is serverless (Modal): health polls must not wake the GPU.
+WORKER_ON_DEMAND = os.environ.get("WORKER_ON_DEMAND", "").lower() in ("1", "true", "yes")
 # Optional: when set, /api/* requires X-API-Key. Leave unset so evaluators can use the UI.
 PUBLIC_API_KEY = os.environ.get("PUBLIC_API_KEY", "")
 

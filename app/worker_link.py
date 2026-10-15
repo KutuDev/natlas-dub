@@ -47,6 +47,10 @@ async def health(max_age: float = 15.0) -> dict:
         return {"online": False, "reason": "not_registered",
                 "detail": "No GPU worker has registered yet."}
     now = time.time()
+    if config.WORKER_ON_DEMAND and max_age > 0:
+        # Serverless GPU (Modal): do not wake the GPU just to answer a health poll.
+        return {"online": True, "ready": True, "on_demand": True,
+                "detail": "GPU starts on the first job; a cold start takes a few minutes.", **info()}
     if _health_cache["value"] is not None and now - _health_cache["t"] < max_age:
         return _health_cache["value"]
     try:

@@ -59,7 +59,7 @@
       workerOk = !!w.online;
       const b = $("workerBadge");
       if (workerOk) {
-        b.textContent = w.ready ? "GPU worker online" : "GPU worker online (models loading)";
+        b.textContent = w.on_demand ? "GPU on demand (first job wakes it, a few minutes)" : (w.ready ? "GPU worker online" : "GPU worker online (models loading)");
         b.className = w.ready ? "badge ok" : "badge";
         $("offlineBanner").classList.add("hidden");
         if (w.limits) { $("limitS").textContent = w.limits.max_video_seconds; $("limitMB").textContent = w.limits.max_video_mb; }
