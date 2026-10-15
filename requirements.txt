@@ -1,11 +1,5 @@
-# torch (CPU wheel) is installed separately in the Dockerfile from
-# https://download.pytorch.org/whl/cpu to keep the image small.
+# Render thin layer only (no ML, no FFmpeg).
 fastapi==0.115.6
-uvicorn[standard]==0.32.1
-python-multipart==0.0.20
+uvicorn==0.32.1
 httpx==0.27.2
 pydantic==2.10.4
-numpy==1.26.4
-soundfile==0.12.1
-transformers==4.46.3
-huggingface_hub==0.26.5

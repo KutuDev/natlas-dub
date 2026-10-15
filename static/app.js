@@ -92,11 +92,12 @@
     const fd = new FormData();
     fd.append("file", f); fd.append("consent", "true");
     fd.append("tester_name", $("testerName").value); fd.append("tester_email", $("testerEmail").value);
+    if ($("trim60").checked) fd.append("trim_to_seconds", "60");
     busy($("uploadBtn"), true); setMsg($("uploadMsg"), "Uploading…", "busy"); lockFrom(2);
     try {
       const r = await api("/api/upload", { method: "POST", body: fd });
       jobId = r.job_id;
-      setMsg($("uploadMsg"), `Uploaded: ${r.duration}s, ${r.size_mb} MB.`, "ok");
+      setMsg($("uploadMsg"), `Uploaded: ${r.duration}s, ${r.size_mb} MB.` + (r.trimmed_from ? ` Trimmed from ${r.trimmed_from}s to the first ${r.duration}s.` : ""), "ok");
       const v = $("sourceVideo"); v.src = `/api/jobs/${jobId}/source`; v.classList.remove("hidden");
       $("segments").innerHTML = ""; $("reviewActions").classList.add("hidden");
       $("audioPreview").classList.add("hidden"); $("resultVideo").classList.add("hidden");
@@ -212,7 +213,7 @@
   $("renderBtn").onclick = async () => {
     busy($("renderBtn"), true); $("step6").classList.add("locked");
     try {
-      await jsonPost(`/api/jobs/${jobId}/render`, { subtitles: $("optSubs").checked, background: $("optBg").checked });
+      await jsonPost(`/api/jobs/${jobId}/render`, { subtitles: $("optSubs").checked, background: $("optBg").checked, sub_position: $("optPos").value, mask: $("optMask").checked, mask_height: Number($("maskH").value) });
       await poll($("renderMsg"));
       const v = $("resultVideo"); v.src = `/api/jobs/${jobId}/video?t=${Date.now()}`; v.classList.remove("hidden");
       $("downloadBtn").href = `/api/jobs/${jobId}/video?download=true`;
@@ -221,5 +222,6 @@
     busy($("renderBtn"), false);
   };
   // Changing options after a render requires re-rendering before export.
-  ["optSubs", "optBg"].forEach(id => $(id).onchange = () => $("step6").classList.add("locked"));
+  $("maskH").oninput = () => { $("maskVal").textContent = Math.round(Number($("maskH").value) * 100) + "%"; $("step6").classList.add("locked"); };
+  ["optSubs", "optBg", "optPos", "optMask"].forEach(id => $(id).onchange = () => $("step6").classList.add("locked"));
 })();

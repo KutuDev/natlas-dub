@@ -24,6 +24,7 @@
       <label>Your name (optional)<input type="text" id="testerName" maxlength="120"></label>
       <label>Email (optional)<input type="email" id="testerEmail" maxlength="200"></label>
     </div>
+    <label class="check"><input type="checkbox" id="trim60"> If the video is longer than the limit, use only its first 60 seconds.</label>
     <label class="check"><input type="checkbox" id="consent"> I own or have rights to this video and its voice; no impersonation.</label>
     <button id="uploadBtn" class="primary">Upload</button>
     <div id="uploadMsg" class="msg"></div>
@@ -80,6 +81,13 @@
   <section class="card locked" id="step5">
     <h2><span class="num">5</span> Preview video</h2>
     <label class="check"><input type="checkbox" id="optSubs" checked> Show subtitles</label>
+    <div class="row">
+      <label>Subtitle position
+        <select id="optPos"><option value="bottom" selected>Bottom</option><option value="top">Top</option></select></label>
+      <label>Cover band height: <b id="maskVal">14%</b>
+        <input type="range" id="maskH" min="0.05" max="0.30" step="0.01" value="0.14"></label>
+    </div>
+    <label class="check"><input type="checkbox" id="optMask"> Cover original burned-in captions with a solid band at the bottom of the frame</label>
     <label class="check"><input type="checkbox" id="optBg"> Background music (mixes the original soundtrack at low volume; the original voice may be faintly audible)</label>
     <button id="renderBtn" class="primary">Render preview</button>
     <div id="renderMsg" class="msg"></div>

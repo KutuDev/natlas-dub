@@ -136,7 +136,8 @@ def run_tts(job_id: str, speed: float):
         _fail(job_id, "voice", exc)
 
 
-def run_render(job_id: str, subtitles: bool, background: bool):
+def run_render(job_id: str, subtitles: bool, background: bool, sub_position: str = "bottom",
+               mask: bool = False, mask_height: float = 0.14):
     job = jobs.get(job_id)
     jobs.update(job_id, stage="rendering", status="running", error=None, message="Rendering video")
     try:
@@ -149,10 +150,12 @@ def run_render(job_id: str, subtitles: bool, background: bool):
         out = d / f"natlas_dub_{job['target_language']}.mp4"
         media.render_video(job["video_path"], job["track_path"], str(out), job["duration"],
                            srt_path=str(srt) if subtitles else None, background=background,
-                           has_audio=job.get("has_audio", True))
+                           has_audio=job.get("has_audio", True), sub_position=sub_position,
+                           mask=mask, mask_height=mask_height)
         job["timings"]["render"] = round(time.time() - t0, 2)
         jobs.update(job_id, output_path=str(out), srt_path=str(srt), stage="rendered", status="done",
-                    render_options={"subtitles": subtitles, "background": background},
+                    render_options={"subtitles": subtitles, "background": background,
+                                    "sub_position": sub_position, "mask": mask, "mask_height": mask_height},
                     message="Video ready")
         session_log.log_event(jobs.get(job_id), "render_done", success=True)
     except Exception as exc:

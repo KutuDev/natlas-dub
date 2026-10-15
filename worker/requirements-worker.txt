@@ -1,0 +1,9 @@
+# Installed ON TOP of the handover requirements in the Kaggle notebook
+# (torch, transformers, accelerate, bitsandbytes, etc. come from the handover/Kaggle image).
+fastapi>=0.110
+uvicorn>=0.29
+python-multipart>=0.0.9
+httpx>=0.27
+soundfile>=0.12
+numpy
+# yarngpt + outetts are needed for YarnGPT TTS (see kaggle_cells.md).

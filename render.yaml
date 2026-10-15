@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: natlas-dub
+    runtime: docker
+    plan: free            # 512 MB RAM, sleeps after ~15 min idle. All ML/FFmpeg runs on the Kaggle GPU worker.
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: GPU_WORKER_URL      # optional fallback; the worker normally self-registers its tunnel URL
+        sync: false
+      - key: GPU_WORKER_KEY      # must equal DEV_API_KEY on the worker
+        sync: false
+      - key: ADMIN_KEY           # protects /admin/*; the worker uses it to register
+        sync: false
+      - key: MAX_VIDEO_SECONDS   # informational here; enforced on the worker
+        value: "90"
+      - key: MAX_VIDEO_MB        # enforced here while streaming, and on the worker
+        value: "100"
+      - key: PUBLIC_API_KEY      # leave empty so evaluators can use the UI
+        sync: false

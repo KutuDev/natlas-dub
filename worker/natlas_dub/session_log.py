@@ -22,6 +22,7 @@ def log_event(job: dict, event: str, success: bool, error: str = None) -> None:
         "target_language": job.get("target_language"),
         "voice": job.get("voice"),
         "video_duration_s": round(float(job.get("duration") or 0), 2),
+        "trimmed_from_s": job.get("trimmed_from"),
         "segments": len(job.get("segments") or []),
         "timings_s": job.get("timings", {}),
         "success": success,

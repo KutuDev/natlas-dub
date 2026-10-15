@@ -1,2 +1,5 @@
 -r requirements.txt
+python-multipart==0.0.20
+numpy==1.26.4
+soundfile==0.12.1
 pytest==8.3.4

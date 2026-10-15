@@ -146,14 +146,29 @@ def build_srt(entries: List[dict]) -> str:
     return "\n".join(lines)
 
 
-SUB_STYLE = ("FontName=DejaVu Sans,FontSize=18,Bold=1,PrimaryColour=&H00FFFFFF,"
-             "OutlineColour=&H00000000,BorderStyle=1,Outline=2,Shadow=1,Alignment=2,MarginV=22")
+def sub_style(position: str = "bottom", margin_v: int = 22) -> str:
+    # force_style uses legacy SSA alignment here (verified): 2 = bottom centre, 6 = top centre.
+    align = 6 if position == "top" else 2
+    return ("FontName=DejaVu Sans,FontSize=18,Bold=1,PrimaryColour=&H00FFFFFF,"
+            f"OutlineColour=&H00000000,BorderStyle=1,Outline=2,Shadow=1,Alignment={align},MarginV={margin_v}")
+
+
+def trim_video(src: str, dst: str, seconds: float) -> None:
+    """Keep only the first `seconds` (re-encoded so the cut is frame-accurate)."""
+    _run(["ffmpeg", "-y", "-v", "error", "-i", str(src), "-t", f"{seconds:.3f}",
+          "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
+          "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(dst)], timeout=900)
 
 
 def render_video(video: str, dub_track: str, out_mp4: str, duration: float,
                  srt_path: str = None, background: bool = False,
-                 background_volume: float = None, has_audio: bool = True) -> None:
+                 background_volume: float = None, has_audio: bool = True,
+                 sub_position: str = "bottom", mask: bool = False, mask_height: float = 0.14) -> None:
     """Replace the audio with the dub track; optionally mix original audio low and burn subs.
+
+    mask: draw a solid black band over the bottom `mask_height` fraction of the frame
+    (to hide captions already burned into the source). With bottom subtitles the new
+    captions are vertically centred inside that band.
 
     Note: "background" mixes the ORIGINAL audio track at low volume. There is no
     vocal/music separation, so the original voice is audible faintly underneath.
@@ -161,12 +176,19 @@ def render_video(video: str, dub_track: str, out_mp4: str, duration: float,
     vol = config.BACKGROUND_VOLUME if background_volume is None else background_volume
     work = Path(out_mp4).parent
     vfilters = ["scale='min(1280,iw)':-2"]
+    mask_height = min(max(float(mask_height), 0.05), 0.4)
+    if mask:
+        vfilters.append(f"drawbox=x=0:y=ih*{1 - mask_height:.4f}:w=iw:h=ih*{mask_height:.4f}:color=black@1.0:t=fill")
     if srt_path:
         # Run with cwd = srt dir and a bare filename to avoid filter-path escaping issues.
         srt_name = Path(srt_path).name
         if Path(srt_path).parent.resolve() != work.resolve():
             shutil.copy(srt_path, work / srt_name)
-        vfilters.append(f"subtitles={srt_name}:force_style='{SUB_STYLE}'")
+        # libass default PlayResY for SRT is 288; MarginV is in that scale.
+        margin_v = 22
+        if mask and sub_position != "top":
+            margin_v = max(4, int(288 * mask_height / 2 - 12))
+        vfilters.append(f"subtitles={srt_name}:force_style='{sub_style(sub_position, margin_v)}'")
     vf = ",".join(vfilters)
 
     cmd = ["ffmpeg", "-y", "-v", "error", "-i", str(Path(video).resolve()),

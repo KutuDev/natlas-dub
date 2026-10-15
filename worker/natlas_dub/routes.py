@@ -55,7 +55,10 @@ def dub_health():
 # ---------------------------------------------------------------- upload + duration gate
 @router.post("/upload")
 async def upload(file: UploadFile = File(...), consent: bool = Form(False),
-                 tester_name: str = Form("", max_length=120), tester_email: str = Form("", max_length=200)):
+                 tester_name: str = Form("", max_length=120), tester_email: str = Form("", max_length=200),
+                 trim_to_seconds: float = Form(0, ge=0, le=600)):
+    """trim_to_seconds > 0: if the video is longer than the limit, keep only its first N seconds
+    (N is capped at MAX_VIDEO_SECONDS). 0 = reject over-length videos (default)."""
     if not consent:
         raise HTTPException(400, "Please confirm you own or have rights to this video and its voice.")
     ext = Path(file.filename or "").suffix.lower()
@@ -84,15 +87,29 @@ async def upload(file: UploadFile = File(...), consent: bool = Form(False),
             raise HTTPException(400, "This video has no audio track to transcribe.")
         if info["duration"] <= 0:
             raise HTTPException(400, "Could not determine video duration.")
+        trimmed_from = None
         if info["duration"] > config.MAX_VIDEO_SECONDS:
-            raise HTTPException(413, f"Video is {info['duration']:.0f}s; the limit is {config.MAX_VIDEO_SECONDS:g}s.")
+            if trim_to_seconds <= 0:
+                raise HTTPException(413, f"Video is {info['duration']:.0f}s; the limit is {config.MAX_VIDEO_SECONDS:g}s. "
+                                         "Tick 'use only the first 60 seconds' to trim it.")
+            keep = min(trim_to_seconds, config.MAX_VIDEO_SECONDS)
+            trimmed = Path(job["dir"]) / "source_trimmed.mp4"
+            try:
+                media.trim_video(str(path), str(trimmed), keep)
+                path.unlink(missing_ok=True)
+                path = trimmed
+                trimmed_from = round(info["duration"], 2)
+                info = media.probe(str(path))
+            except media.MediaError:
+                raise HTTPException(400, "Could not trim this video.")
     except Exception:
         jobs.discard(job["job_id"])
         raise
     jobs.update(job["job_id"], video_path=str(path), duration=info["duration"],
-                has_audio=info["has_audio"], size_bytes=size)
-    log.info("upload job=%s duration=%.1fs size=%dB", job["job_id"], info["duration"], size)
-    return {"job_id": job["job_id"], "duration": round(info["duration"], 2), "size_mb": round(size / 1048576, 2)}
+                has_audio=info["has_audio"], size_bytes=size, trimmed_from=trimmed_from)
+    log.info("upload job=%s duration=%.1fs size=%dB trimmed_from=%s", job["job_id"], info["duration"], size, trimmed_from)
+    return {"job_id": job["job_id"], "duration": round(info["duration"], 2),
+            "size_mb": round(size / 1048576, 2), "trimmed_from": trimmed_from}
 
 
 @router.get("/jobs/{job_id}")
@@ -234,6 +251,9 @@ def audio(job_id: str):
 class RenderRequest(BaseModel):
     subtitles: bool = True
     background: bool = False
+    sub_position: str = Field("bottom", pattern="^(bottom|top)$")
+    mask: bool = False                      # cover burned-in source captions
+    mask_height: float = Field(0.14, ge=0.05, le=0.4)
 
 
 @router.post("/jobs/{job_id}/render")
@@ -243,7 +263,8 @@ def render(job_id: str, req: RenderRequest, bg: BackgroundTasks):
     if not job.get("track_path"):
         raise HTTPException(409, "Generate the voice first")
     jobs.update(job_id, status="running", stage="rendering", message="Queued")
-    bg.add_task(pipeline.run_render, job_id, req.subtitles, req.background)
+    bg.add_task(pipeline.run_render, job_id, req.subtitles, req.background,
+                req.sub_position, req.mask, req.mask_height)
     return {"job_id": job_id, "status": "running"}
 
 

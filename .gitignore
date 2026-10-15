@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+.pytest_cache/
+test_artifacts/
+testclips/
+*.mp4
+*.mov
+*.webm
+*.wav
+model_cache/

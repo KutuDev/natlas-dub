@@ -1,0 +1,9 @@
+.git
+worker
+tests
+test_artifacts
+testclips
+**/__pycache__
+*.mp4
+*.wav
+.env
