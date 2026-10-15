@@ -5,6 +5,7 @@ gated: requires HF_TOKEN with access granted on each model page).
 Models are lazy-loaded once per source language and cached in HF_HOME.
 """
 
+import logging
 import threading
 from typing import Dict, List
 
@@ -13,6 +14,7 @@ import soundfile as sf
 
 from . import config
 
+log = logging.getLogger("natlas_dub.asr")
 _pipelines: Dict[str, object] = {}
 _load_lock = threading.Lock()
 _infer_lock = threading.Lock()  # one CPU inference at a time
@@ -94,13 +96,37 @@ def transcribe(wav_path: str, source_language: str = "en", duration: float = Non
     if duration is None:
         duration = len(audio) / sr
     with _infer_lock:
-        result = asr(
-            {"raw": np.ascontiguousarray(audio), "sampling_rate": sr},
-            return_timestamps=True,
-            chunk_length_s=30,
-            batch_size=1,
-        )
-    return chunks_to_segments(result, duration)
+        try:
+            result = asr(
+                {"raw": np.ascontiguousarray(audio), "sampling_rate": sr},
+                return_timestamps=True,
+                chunk_length_s=30,
+                batch_size=1,
+            )
+            return chunks_to_segments(result, duration)
+        except (ValueError, RuntimeError, KeyError) as exc:
+            # Some fine-tunes ship without timestamp-token config. Fall back to fixed
+            # windows so the pipeline still has timed segments (coarser alignment, flagged).
+            log.warning("timestamped ASR failed (%s); using %ss windows", type(exc).__name__, WINDOW_S)
+            return _windowed(asr, audio, sr, duration)
+
+
+WINDOW_S = 8.0
+
+
+def _windowed(asr, audio, sr, duration):
+    segments = []
+    step = int(WINDOW_S * sr)
+    for i in range(0, len(audio), step):
+        chunk = audio[i:i + step]
+        if len(chunk) < sr * 0.3:
+            continue
+        text = (asr({"raw": np.ascontiguousarray(chunk), "sampling_rate": sr}).get("text") or "").strip()
+        start, end = i / sr, min((i + len(chunk)) / sr, duration)
+        if text:
+            segments.append({"start": round(start, 2), "end": round(end, 2), "text": text,
+                             "flags": flag_low_confidence(text, start, end) + ["coarse_timing"]})
+    return segments
 
 
 def chunks_to_segments(result: dict, duration: float) -> List[dict]:
