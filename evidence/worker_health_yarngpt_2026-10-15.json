@@ -1,0 +1,1 @@
+{"status":"ok","ffmpeg":true,"asr":{"default_model":"NCAIR1/NigerianAccentedEnglish","hf_token_set":true,"loaded_models":[]},"models":{"translate":true,"speech":true,"speech_backend":"YarnGPT (local + YarnGPT2 English)","speech_supports_voice":true,"yarngpt_error":null},"limits":{"max_video_seconds":90.0,"max_video_mb":100.0}}

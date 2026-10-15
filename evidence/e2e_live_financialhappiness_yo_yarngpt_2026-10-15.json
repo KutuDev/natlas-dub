@@ -1,0 +1,639 @@
+{
+ "clip": "moniepoint__poweringdreams__financialhappiness___.mp4",
+ "target": "yo",
+ "via": "https://natlas-dub.onrender.com",
+ "steps": [
+  {
+   "step": "upload",
+   "seconds": 2.4,
+   "http": 200
+  },
+  {
+   "step": "process_asr_translate",
+   "seconds": 52.8,
+   "status": "done",
+   "stage": "review",
+   "error": null
+  },
+  {
+   "step": "approve_all_unedited",
+   "seconds": 0.9
+  },
+  {
+   "step": "tts",
+   "seconds": 278.1,
+   "status": "done",
+   "stage": "voiced",
+   "error": null
+  },
+  {
+   "step": "render",
+   "seconds": 12.9,
+   "status": "done",
+   "stage": "rendered",
+   "error": null
+  }
+ ],
+ "segments": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "end": 2.76,
+   "original_text": "the time i got to learn about money points, i started with.",
+   "target_language": "Yoruba",
+   "translated_text": "Nígbà tí mo bẹ̀rẹ̀ sí í mọ̀ nípa owó, mo bẹ̀rẹ̀ pẹ̀lú.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Nígbà tí mo bẹ̀rẹ̀ sí í mọ̀ nípa owó, mo bẹ̀rẹ̀ pẹ̀lú.",
+   "char_count": 54
+  },
+  {
+   "index": 1,
+   "start": 2.76,
+   "end": 4.77,
+   "original_text": "yes, other mmo.",
+   "target_language": "Yoruba",
+   "translated_text": "bẹẹni, àwọn mmo.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "bẹẹni, àwọn mmo.",
+   "char_count": 16
+  },
+  {
+   "index": 2,
+   "start": 4.77,
+   "end": 7.32,
+   "original_text": "their settlement was not an instant settlement.",
+   "target_language": "Yoruba",
+   "translated_text": "Ibi wọn jẹ́ kò ṣeé ṣe kí wọ́n ṣètò lẹ́sẹ̀kẹsẹ̀.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Ibi wọn jẹ́ kò ṣeé ṣe kí wọ́n ṣètò lẹ́sẹ̀kẹsẹ̀.",
+   "char_count": 47
+  },
+  {
+   "index": 3,
+   "start": 7.32,
+   "end": 9.42,
+   "original_text": "it was a 20-hour-long struggle to maintain a healthy diet.",
+   "target_language": "Yoruba",
+   "translated_text": "ó jẹ́ ìjà 20-wákàtí láti tọ́jú oúnjẹ tó dára.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "ó jẹ́ ìjà 20-wákàtí láti tọ́jú oúnjẹ tó dára.",
+   "char_count": 45
+  },
+  {
+   "index": 4,
+   "start": 9.42,
+   "end": 13.92,
+   "original_text": "and with the demand of customers here yesterday and with the little cash we have, we are looking for",
+   "target_language": "Yoruba",
+   "translated_text": "ati pẹlu ibeere awọn onibara nibi ana ati pẹlu owo kekere ti a ni, a n wa",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "ati pẹlu ibeere awọn onibara nibi ana ati pẹlu owo kekere ti a ni, a n wa",
+   "char_count": 73
+  },
+  {
+   "index": 5,
+   "start": 13.92,
+   "end": 15.87,
+   "original_text": "where we can get a better service.",
+   "target_language": "Yoruba",
+   "translated_text": "níbi tí a ti lè gba ìsìn tó dára jù lọ.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "níbi tí a ti lè gba ìsìn tó dára jù lọ.",
+   "char_count": 39
+  },
+  {
+   "index": 6,
+   "start": 15.87,
+   "end": 18.33,
+   "original_text": "no, it's like some of them have been casting for something.",
+   "target_language": "Yoruba",
+   "translated_text": "Bẹ́ẹ̀ ni, ó dà bí ẹ̀dá kan lára ​​wọn tí wọ́n ti ń fi ìdìpọ̀ fún nǹkan kan.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Bẹ́ẹ̀ ni, ó dà bí ẹ̀dá kan lára ​​wọn tí wọ́n ti ń fi ìdìpọ̀ fún nǹkan kan.",
+   "char_count": 75
+  },
+  {
+   "index": 7,
+   "start": 18.33,
+   "end": 22.98,
+   "original_text": "that is what i began to add, when would i, another thing that really convinced me to wait for them",
+   "target_language": "Yoruba",
+   "translated_text": "tí ó bẹ̀rẹ̀ sí í ṣe, nígbà tí mo máa ń ṣe bẹ́ẹ̀, nígbà tí ohun mìíràn tó jẹ́ kí n dúró de wọn",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "tí ó bẹ̀rẹ̀ sí í ṣe, nígbà tí mo máa ń ṣe bẹ́ẹ̀, nígbà tí ohun mìíràn tó jẹ́ kí n dúró de wọn",
+   "char_count": 93
+  },
+  {
+   "index": 8,
+   "start": 22.98,
+   "end": 26.1,
+   "original_text": "it is that they said it was going to be an instant failure.",
+   "target_language": "Yoruba",
+   "translated_text": "Ó sọ pé yóò jẹ́ ìkùnà tí kò ṣeé yẹ̀ sílẹ̀ lẹ́sẹ̀kẹsẹ̀.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Ó sọ pé yóò jẹ́ ìkùnà tí kò ṣeé yẹ̀ sílẹ̀ lẹ́sẹ̀kẹsẹ̀.",
+   "char_count": 54
+  },
+  {
+   "index": 9,
+   "start": 26.1,
+   "end": 27.45,
+   "original_text": "settlement",
+   "target_language": "Yoruba",
+   "translated_text": "Ìlú",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Ìlú",
+   "char_count": 3
+  },
+  {
+   "index": 10,
+   "start": 27.45,
+   "end": 29.79,
+   "original_text": "agrees, but are being ordered of the day",
+   "target_language": "Yoruba",
+   "translated_text": "dá aibikita, ṣugbọn wọ́n ń bá a lọ ní ọjọ́",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "dá aibikita, ṣugbọn wọ́n ń bá a lọ ní ọjọ́",
+   "char_count": 42
+  },
+  {
+   "index": 11,
+   "start": 29.79,
+   "end": 31.35,
+   "original_text": "24hrs.",
+   "target_language": "Yoruba",
+   "translated_text": "24hrs. ni ọgọ́rùn-ún mẹ̀rin ati ogójì [ìṣẹ́jú].",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "24hrs. ni ọgọ́rùn-ún mẹ̀rin ati ogójì [ìṣẹ́jú].",
+   "char_count": 47
+  },
+  {
+   "index": 12,
+   "start": 31.35,
+   "end": 32.91,
+   "original_text": "so with that",
+   "target_language": "Yoruba",
+   "translated_text": "Nítorí náà, pẹ̀lú rẹ̀.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Nítorí náà, pẹ̀lú rẹ̀.",
+   "char_count": 22
+  },
+  {
+   "index": 13,
+   "start": 32.91,
+   "end": 34.5,
+   "original_text": "and more also",
+   "target_language": "Yoruba",
+   "translated_text": "ati diẹ sii pẹlupẹlu",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "ati diẹ sii pẹlupẹlu",
+   "char_count": 20
+  },
+  {
+   "index": 14,
+   "start": 34.5,
+   "end": 37.44,
+   "original_text": "they promise us having a constant care unit.",
+   "target_language": "Yoruba",
+   "translated_text": "Wọ́n ṣe ìlérí pé wọ́n ní ẹ̀ka ìtọ́jú àtẹ̀yìnwá.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Wọ́n ṣe ìlérí pé wọ́n ní ẹ̀ka ìtọ́jú àtẹ̀yìnwá.",
+   "char_count": 47
+  },
+  {
+   "index": 15,
+   "start": 37.44,
+   "end": 38.52,
+   "original_text": "network",
+   "target_language": "Yoruba",
+   "translated_text": "nẹtiwọọki",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "nẹtiwọọki",
+   "char_count": 9
+  },
+  {
+   "index": 16,
+   "start": 38.52,
+   "end": 39.66,
+   "original_text": "so",
+   "target_language": "Yoruba",
+   "translated_text": "Ṣe",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Ṣe",
+   "char_count": 2
+  },
+  {
+   "index": 17,
+   "start": 39.66,
+   "end": 43.77,
+   "original_text": "those are the three things that really convinced me to wait for them and",
+   "target_language": "Yoruba",
+   "translated_text": "àwọn náà ni mẹ́ta tó gbọ́dọ̀ yà mí lẹ́nu láti dúró de wọn",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "àwọn náà ni mẹ́ta tó gbọ́dọ̀ yà mí lẹ́nu láti dúró de wọn",
+   "char_count": 57
+  },
+  {
+   "index": 18,
+   "start": 43.77,
+   "end": 45.39,
+   "original_text": "when i saw the product",
+   "target_language": "Yoruba",
+   "translated_text": "Nígbà tí mo rí ọjà náà",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Nígbà tí mo rí ọjà náà",
+   "char_count": 22
+  },
+  {
+   "index": 19,
+   "start": 45.39,
+   "end": 47.49,
+   "original_text": "and we tested it",
+   "target_language": "Yoruba",
+   "translated_text": "àti pé a ṣe ìdánwò rẹ̀",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "àti pé a ṣe ìdánwò rẹ̀",
+   "char_count": 22
+  },
+  {
+   "index": 20,
+   "start": 47.49,
+   "end": 49.8,
+   "original_text": "and i saw the way it works and i was like wow this is going to work out for me too!",
+   "target_language": "Yoruba",
+   "translated_text": "ati pe mo ri bi o ṣe n ṣiṣẹ ati pe mo dabi wow eyi yoo ṣiṣẹ fun mi paapaa!",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [
+    "speech_rate_implausible"
+   ],
+   "warnings": [],
+   "final_text": "ati pe mo ri bi o ṣe n ṣiṣẹ ati pe mo dabi wow eyi yoo ṣiṣẹ fun mi paapaa!",
+   "char_count": 74
+  },
+  {
+   "index": 21,
+   "start": 49.8,
+   "end": 51.24,
+   "original_text": "really?",
+   "target_language": "Yoruba",
+   "translated_text": "Ṣé bẹ́ẹ̀ ni?",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Ṣé bẹ́ẹ̀ ni?",
+   "char_count": 12
+  },
+  {
+   "index": 22,
+   "start": 51.24,
+   "end": 52.86,
+   "original_text": "it was waiting for.",
+   "target_language": "Yoruba",
+   "translated_text": "Ó ń retí.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Ó ń retí.",
+   "char_count": 9
+  },
+  {
+   "index": 23,
+   "start": 52.86,
+   "end": 54.84,
+   "original_text": "so thats what you look confused at?",
+   "target_language": "Yoruba",
+   "translated_text": "Nítorí náà, èyí ni o ṣe yà ọ́?",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Nítorí náà, èyí ni o ṣe yà ọ́?",
+   "char_count": 30
+  },
+  {
+   "index": 24,
+   "start": 54.84,
+   "end": 59.61,
+   "original_text": "i was really excited when i saw the product.",
+   "target_language": "Yoruba",
+   "translated_text": "Mo dùn gan-an nígbà tí mo rí ọjà náà.",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [],
+   "warnings": [],
+   "final_text": "Mo dùn gan-an nígbà tí mo rí ọjà náà.",
+   "char_count": 37
+  },
+  {
+   "index": 25,
+   "start": 59.61,
+   "end": 62.44,
+   "original_text": "crucial.",
+   "target_language": "Yoruba",
+   "translated_text": "pataki",
+   "edited_text": null,
+   "status": "ai_generated",
+   "flags": [
+    "very_short_for_duration"
+   ],
+   "warnings": [],
+   "final_text": "pataki",
+   "char_count": 6
+  }
+ ],
+ "video_bytes": 5075569,
+ "srt_bytes": 2245,
+ "audio_bytes": 5996876,
+ "job_meta": {
+  "job_id": "8bf393d75bef4935b056afabb56b6aad",
+  "created": 1792067041.1272728,
+  "stage": "rendered",
+  "status": "done",
+  "error": null,
+  "message": "Video ready",
+  "warnings": [
+   "Segment 7: voice is 3.2s for a 2.5s slot; sped up 1.25x (cap) and it will overlap the next segment. Shorten the text or raise speech speed.",
+   "Segment 12: voice is 2.6s for a 1.6s slot; sped up 1.25x (cap) and it will overlap the next segment. Shorten the text or raise speech speed.",
+   "Segment 21: voice is 4.2s for a 2.3s slot; sped up 1.25x (cap) and it will overlap the next segment. Shorten the text or raise speech speed."
+  ],
+  "timings": {
+   "extract_audio": 0.25,
+   "asr": 11.29,
+   "translation": 40.23,
+   "tts": 269.14,
+   "audio_fit": 4.54,
+   "render": 10.82
+  },
+  "translation_edited": false,
+  "filename": "moniepoint__poweringdreams__financialhappiness___.mp4",
+  "tester_name": "Hark internal test",
+  "tester_email": "",
+  "duration": 62.467,
+  "has_audio": true,
+  "size_bytes": 4955038,
+  "trimmed_from": null,
+  "target_language": "yo",
+  "source_language": "en",
+  "voice": "female",
+  "protected_terms": [
+   "Moniepoint"
+  ],
+  "speed": 1.0,
+  "clips": [
+   {
+    "index": 0,
+    "start": 0.0,
+    "slot": 2.76,
+    "duration": 2.52,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 1,
+    "start": 2.76,
+    "slot": 2.01,
+    "duration": 0.73,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 2,
+    "start": 4.77,
+    "slot": 2.55,
+    "duration": 2.48,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 3,
+    "start": 7.32,
+    "slot": 2.1,
+    "duration": 2.1,
+    "fit_tempo": 1.137
+   },
+   {
+    "index": 4,
+    "start": 9.42,
+    "slot": 4.5,
+    "duration": 4.07,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 5,
+    "start": 13.92,
+    "slot": 1.95,
+    "duration": 1.93,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 6,
+    "start": 15.87,
+    "slot": 2.46,
+    "duration": 2.54,
+    "fit_tempo": 1.25
+   },
+   {
+    "index": 7,
+    "start": 18.33,
+    "slot": 4.65,
+    "duration": 4.24,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 8,
+    "start": 22.98,
+    "slot": 3.12,
+    "duration": 2.95,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 9,
+    "start": 26.1,
+    "slot": 1.35,
+    "duration": 0.09,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 10,
+    "start": 27.45,
+    "slot": 2.34,
+    "duration": 1.88,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 11,
+    "start": 29.79,
+    "slot": 1.56,
+    "duration": 2.05,
+    "fit_tempo": 1.25
+   },
+   {
+    "index": 12,
+    "start": 31.35,
+    "slot": 1.56,
+    "duration": 1.08,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 13,
+    "start": 32.91,
+    "slot": 1.59,
+    "duration": 1.4,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 14,
+    "start": 34.5,
+    "slot": 2.94,
+    "duration": 2.48,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 15,
+    "start": 37.44,
+    "slot": 1.08,
+    "duration": 0.6,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 16,
+    "start": 38.52,
+    "slot": 1.14,
+    "duration": 0.09,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 17,
+    "start": 39.66,
+    "slot": 4.11,
+    "duration": 2.87,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 18,
+    "start": 43.77,
+    "slot": 1.62,
+    "duration": 1.28,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 19,
+    "start": 45.39,
+    "slot": 2.1,
+    "duration": 1.2,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 20,
+    "start": 47.49,
+    "slot": 2.31,
+    "duration": 3.39,
+    "fit_tempo": 1.25
+   },
+   {
+    "index": 21,
+    "start": 49.8,
+    "slot": 1.44,
+    "duration": 0.44,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 22,
+    "start": 51.24,
+    "slot": 1.62,
+    "duration": 0.41,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 23,
+    "start": 52.86,
+    "slot": 1.98,
+    "duration": 1.48,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 24,
+    "start": 54.84,
+    "slot": 4.77,
+    "duration": 1.68,
+    "fit_tempo": 1.0
+   },
+   {
+    "index": 25,
+    "start": 59.61,
+    "slot": 2.86,
+    "duration": 0.4,
+    "fit_tempo": 1.0
+   }
+  ],
+  "render_options": {
+   "subtitles": true,
+   "background": false,
+   "sub_position": "bottom",
+   "mask": true,
+   "mask_height": 0.14
+  },
+  "has_audio_preview": true,
+  "has_video": true
+ }
+}
