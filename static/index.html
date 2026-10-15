@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>N-ATLAS Dub: Nigerian-language video dubbing</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo">N</span><div><h1>N-ATLAS Dub</h1><p>Dub short videos into Yoruba, Igbo, Hausa and Nigerian English, with a human review step.</p></div></div>
+  <div id="workerBadge" class="badge">Checking services…</div>
+</header>
+
+<div id="offlineBanner" class="banner hidden"></div>
+
+<main>
+  <!-- Step 1 -->
+  <section class="card" id="step1">
+    <h2><span class="num">1</span> Upload video</h2>
+    <p class="hint">MP4, MOV or WEBM, up to <span id="limitS">90</span> seconds and <span id="limitMB">100</span> MB.</p>
+    <input type="file" id="file" accept="video/mp4,video/quicktime,video/webm,.mp4,.mov,.webm,.m4v">
+    <div class="row">
+      <label>Your name (optional)<input type="text" id="testerName" maxlength="120"></label>
+      <label>Email (optional)<input type="email" id="testerEmail" maxlength="200"></label>
+    </div>
+    <label class="check"><input type="checkbox" id="consent"> I own or have rights to this video and its voice; no impersonation.</label>
+    <button id="uploadBtn" class="primary">Upload</button>
+    <div id="uploadMsg" class="msg"></div>
+    <video id="sourceVideo" class="hidden" controls playsinline></video>
+  </section>
+
+  <!-- Step 2 -->
+  <section class="card locked" id="step2">
+    <h2><span class="num">2</span> Select language and voice</h2>
+    <div class="row">
+      <label>Spoken language in video
+        <select id="sourceLang">
+          <option value="en" selected>English (Nigerian-accented)</option>
+          <option value="yo">Yoruba</option><option value="ha">Hausa</option><option value="ig">Igbo</option>
+        </select></label>
+      <label>Dub into
+        <select id="targetLang">
+          <option value="yo">Yoruba</option><option value="ig">Igbo</option>
+          <option value="ha">Hausa</option><option value="en">Nigerian English</option>
+        </select></label>
+      <label>Voice
+        <select id="voice"><option value="female">Female</option><option value="male">Male</option></select></label>
+    </div>
+    <label>Protected terms, kept exactly as written (comma-separated brand or product names)
+      <input type="text" id="protectedTerms" placeholder="e.g. OPEX Consulting, Awarri, Jollof Express"></label>
+    <p class="hint">URLs, phone numbers, currency amounts and ALL-CAPS/CamelCase brand tokens are protected automatically.</p>
+  </section>
+
+  <!-- Step 3 -->
+  <section class="card locked" id="step3">
+    <h2><span class="num">3</span> Transcribe, translate and review</h2>
+    <button id="processBtn" class="primary">Transcribe + translate</button>
+    <div id="processMsg" class="msg"></div>
+    <div id="keyboard" class="keyboard hidden"></div>
+    <div id="segments"></div>
+    <div class="row actions hidden" id="reviewActions">
+      <button id="approveAllBtn">Approve all</button>
+      <a id="srtLink" class="btn" href="#" download>Download subtitles (.srt)</a>
+    </div>
+  </section>
+
+  <!-- Step 4 -->
+  <section class="card locked" id="step4">
+    <h2><span class="num">4</span> Generate voice</h2>
+    <label>Speech speed: <b id="speedVal">1.00x</b>
+      <input type="range" id="speed" min="0.65" max="1.25" step="0.05" value="1.0"></label>
+    <button id="ttsBtn" class="primary">Generate voice</button>
+    <div id="ttsMsg" class="msg"></div>
+    <ul id="ttsWarnings" class="warnings"></ul>
+    <audio id="audioPreview" class="hidden" controls></audio>
+  </section>
+
+  <!-- Step 5 -->
+  <section class="card locked" id="step5">
+    <h2><span class="num">5</span> Preview video</h2>
+    <label class="check"><input type="checkbox" id="optSubs" checked> Show subtitles</label>
+    <label class="check"><input type="checkbox" id="optBg"> Background music (mixes the original soundtrack at low volume; the original voice may be faintly audible)</label>
+    <button id="renderBtn" class="primary">Render preview</button>
+    <div id="renderMsg" class="msg"></div>
+    <video id="resultVideo" class="hidden" controls playsinline></video>
+  </section>
+
+  <!-- Step 6 -->
+  <section class="card locked" id="step6">
+    <h2><span class="num">6</span> Export</h2>
+    <a id="downloadBtn" class="btn primary" href="#">Download MP4</a>
+    <a id="downloadSrt" class="btn" href="#" download>Download subtitles (.srt)</a>
+  </section>
+</main>
+
+<footer>
+  <p><b>N-ATLAS Dub</b>, created by OPEX Consulting. Powered by Awarri.</p>
+  <p>N-ATLaS is an initiative of the Federal Ministry of Communications, Innovation and Digital Economy, and powered by Awarri Technologies.</p>
+  <p class="small">AI output is reviewed by a human before voicing. Do not use this tool to impersonate anyone or create deceptive content.</p>
+</footer>
+<script src="/app.js"></script>
+</body>
+</html>
