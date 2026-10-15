@@ -122,7 +122,7 @@ def test_end_to_end_through_proxy(render, worker_url, tmp_path):
     s = render.get("/admin/sessions", headers=ADMIN).json()
     assert s["worker_log_error"] is None
     events = [e["event"] for e in s["entries"] if e.get("job_id") == jid]
-    assert events == ["transcribe_translate_done", "voice_done", "render_done", "export_downloaded"]
+    assert events == ["upload_received", "process_started", "transcribe_translate_done", "tts_started", "voice_done", "render_started", "render_done", "export_downloaded"]
     assert any(e["event"] == "upload_worker_offline" for e in s["entries"])  # from the offline test
 
 

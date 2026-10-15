@@ -113,7 +113,7 @@ def test_full_flow(client, tmp_path):
 
     log = client.get("/dub/admin/sessions", headers=KEY).json()["entries"]
     mine = [e for e in log if e.get("job_id") == jid]
-    assert [e["event"] for e in mine] == ["transcribe_translate_done", "voice_done", "render_done", "export_downloaded"]
+    assert [e["event"] for e in mine] == ["upload_received", "process_started", "transcribe_translate_done", "tts_started", "voice_done", "render_started", "render_done", "export_downloaded"]
     assert mine[-1]["translation_edited"] is True and mine[0]["tester_name"] == "Test"
     assert "asr" in mine[-1]["timings_s"] and "render" in mine[-1]["timings_s"]
 

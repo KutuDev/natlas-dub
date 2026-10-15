@@ -107,6 +107,7 @@ async def upload(file: UploadFile = File(...), consent: bool = Form(False),
         raise
     jobs.update(job["job_id"], video_path=str(path), duration=info["duration"],
                 has_audio=info["has_audio"], size_bytes=size, trimmed_from=trimmed_from)
+    session_log.log_event(jobs.get(job["job_id"]), "upload_received", success=True)
     log.info("upload job=%s duration=%.1fs size=%dB trimmed_from=%s", job["job_id"], info["duration"], size, trimmed_from)
     return {"job_id": job["job_id"], "duration": round(info["duration"], 2),
             "size_mb": round(size / 1048576, 2), "trimmed_from": trimmed_from}
@@ -146,6 +147,7 @@ def process(job_id: str, req: ProcessRequest, bg: BackgroundTasks):
                 voice=req.voice, protected_terms=terms, segments=[], track_path=None,
                 output_path=None, translation_edited=False, warnings=[], status="running",
                 stage="processing", message="Queued", timings={})
+    session_log.log_event(jobs.get(job_id), "process_started", success=True)
     bg.add_task(_serial, pipeline.run_process, job_id)
     return {"job_id": job_id, "status": "running"}
 
@@ -235,6 +237,7 @@ def tts(job_id: str, req: TTSRequest, bg: BackgroundTasks):
             raise HTTPException(400, "Voice must be female or male")
         jobs.update(job_id, voice=req.voice)
     jobs.update(job_id, status="running", stage="tts", message="Queued")
+    session_log.log_event(jobs.get(job_id), "tts_started", success=True)
     bg.add_task(_serial, pipeline.run_tts, job_id, req.speed)
     return {"job_id": job_id, "status": "running"}
 
@@ -263,6 +266,7 @@ def render(job_id: str, req: RenderRequest, bg: BackgroundTasks):
     if not job.get("track_path"):
         raise HTTPException(409, "Generate the voice first")
     jobs.update(job_id, status="running", stage="rendering", message="Queued")
+    session_log.log_event(jobs.get(job_id), "render_started", success=True)
     bg.add_task(pipeline.run_render, job_id, req.subtitles, req.background,
                 req.sub_position, req.mask, req.mask_height)
     return {"job_id": job_id, "status": "running"}
