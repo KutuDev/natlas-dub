@@ -11,7 +11,18 @@
 | **Developer documentation portal (interactive API)** | https://natlas-dub.onrender.com/docs |
 | **API reference (ReDoc)** | https://natlas-dub.onrender.com/redoc |
 | **OpenAPI spec** | https://natlas-dub.onrender.com/openapi.json |
+| **Android app (Flutter)** | https://github.com/Igwe-Ugo/n_atlas_dub |
 | **Real-run evidence** | [`evidence/`](evidence/) |
+
+## Android app
+
+The Flutter mobile client, [Igwe-Ugo/n_atlas_dub](https://github.com/Igwe-Ugo/n_atlas_dub), calls this API at `https://natlas-dub.onrender.com`. The review screen shows Yoruba segments from a real N-ATLaS run on the financial advert.
+
+| Home | Upload | Language and voice |
+|:---:|:---:|:---:|
+| <img src="docs/mobile/dashboard.png" width="230" alt="Home screen listing the six dubbing steps"> | <img src="docs/mobile/upload.png" width="230" alt="Upload screen with consent checkbox"> | <img src="docs/mobile/language.png" width="230" alt="Choose Yoruba, Igbo or Hausa, a voice, and names to keep unchanged"> |
+| **Review the translation** | **Generate the voice** | **Done** |
+| <img src="docs/mobile/translation.png" width="230" alt="Segment-by-segment Yoruba review with edit and approve"> | <img src="docs/mobile/voice.png" width="230" alt="YarnGPT voice generation with speed control"> | <img src="docs/mobile/completion.png" width="230" alt="Completion screen"> |
 
 ## Models
 
