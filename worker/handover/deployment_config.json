@@ -1,0 +1,32 @@
+{
+  "project": "N-ATLAS Multilingual Video Localizer",
+  "framework": "FastAPI",
+  "port": 8000,
+  "authentication_header": "X-API-Key",
+  "supported_languages": [
+    "English",
+    "Yoruba",
+    "Hausa",
+    "Igbo"
+  ],
+  "endpoints": [
+    "GET /health",
+    "POST /upload",
+    "GET /videos/{video_id}",
+    "POST /transcribe/{video_id}",
+    "POST /translate",
+    "POST /generate-speech",
+    "POST /upload-audio",
+    "POST /localize",
+    "GET /jobs/{job_id}",
+    "GET /results/{job_id}"
+  ],
+  "deployment_notes": [
+    "Load models using run_project.py after a fresh runtime.",
+    "Do not reload models in an already initialized session.",
+    "Set DEV_API_KEY securely before starting the API.",
+    "Run Uvicorn in the same Python process as loaded models.",
+    "Cloudflare Quick Tunnel URLs are temporary.",
+    "Model weights are not included in this backup."
+  ]
+}

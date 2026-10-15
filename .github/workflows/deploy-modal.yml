@@ -1,0 +1,38 @@
+name: Deploy GPU worker to Modal
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["worker/**", ".github/workflows/deploy-modal.yml"]
+permissions:
+  contents: read
+  deployments: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
+      MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install modal
+      - name: Sync worker secret
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
+        run: modal secret create natlas-dub-worker HF_TOKEN="$HF_TOKEN" DEV_API_KEY="$DEV_API_KEY" --force
+      - name: Deploy
+        id: deploy
+        run: |
+          modal deploy worker/modal_app.py | tee deploy.log
+          echo "url=$(grep -o 'https://[^ ]*modal\.run' deploy.log | head -1)" >> "$GITHUB_OUTPUT"
+      - name: Record worker URL as a GitHub deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          URL: ${{ steps.deploy.outputs.url }}
+        run: |
+          printf '{"ref":"%s","environment":"modal-worker","auto_merge":false,"required_contexts":[],"description":"%s"}' "$GITHUB_SHA" "$URL" > d.json
+          id=$(gh api repos/$GITHUB_REPOSITORY/deployments --input d.json --jq .id)
+          gh api repos/$GITHUB_REPOSITORY/deployments/$id/statuses -f state=success -f environment_url="$URL"

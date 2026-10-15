@@ -12,7 +12,7 @@ from pathlib import Path
 import modal
 
 HERE = Path(__file__).resolve().parent
-HANDOVER = Path(os.environ.get("HANDOVER_DIR", HERE.parent.parent / "handover" / "N_ATLAS_Developer_Handover"))
+HANDOVER = Path(os.environ.get("HANDOVER_DIR", HERE / "handover"))
 REMOTE = "/root/app"
 SCALEDOWN = int(os.environ.get("WORKER_SCALEDOWN_S", "300"))
 

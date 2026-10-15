@@ -1,0 +1,19 @@
+# N-ATLAS Video Localizer
+# Python dependencies
+
+torch
+transformers
+accelerate
+bitsandbytes
+huggingface_hub
+sentencepiece
+gradio>=5.49,<6
+openai-whisper
+soundfile
+numpy
+fastapi
+uvicorn[standard]
+python-multipart
+httpx
+pydantic
+python-dotenv
